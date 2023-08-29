@@ -9,7 +9,7 @@ export class CroosfitPage implements OnInit {
   constructor(private router: Router){}
 
   gotoejercicios(){
-    this.router.navigate(['/croos-ejercicios'])
+    this.router.navigate(['/training'])
   }
 
   ngOnInit() {}
