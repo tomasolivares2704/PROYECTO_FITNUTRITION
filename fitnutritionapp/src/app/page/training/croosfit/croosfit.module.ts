@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CroosfitPageRoutingModule } from './croosfit-routing.module';
 
 import { CroosfitPage } from './croosfit.page';
+import {shareModule} from '../../../share/share.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CroosfitPageRoutingModule
+    CroosfitPageRoutingModule,
+    shareModule
   ],
   declarations: [CroosfitPage]
 })

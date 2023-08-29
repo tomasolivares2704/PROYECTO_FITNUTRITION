@@ -4,25 +4,31 @@
     <div class="logo-text"><span class="logo-highlight">Fit</span>Nutrition <span class="logo-highlight2">APP</span></div>
   </div>
 
-  <ion-card>
-    <ion-grid>
-      <ion-row>
-        <ion-col size="8">
-          <img alt="Silhouette of mountains" src="https://mhunters.com/wp-content/uploads/2021/08/snatch-ejercicios-de-crossfit.jpg" />
-        </ion-col>
-        <ion-col size="4">
-          <ion-card-title style="text-align: center;">Muscle Snatch</ion-card-title>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-row>
-      <ion-card-content style="text-align:justify;">
-        El muscle snatch  es una vaaaaaaaariación de la arrancada. Los objetivos de cada movimiento son casi idénticos – mover el peso desde la posición inicial hasta conseguir levantar el peso por encima de la cabeza.
-      </ion-card-content>
-     
-    </ion-row>
 
-  
-  </ion-card>
+ 
+  <!-- CARD -->
+  <ion-list>
+    <ion-card *ngFor="let rutina of rutinas">
+      <ion-card-header>
+        <ion-card-title>{{ rutina.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img style="width: 300px; height: 200px;" [src]="rutina.image"></ion-img>
+        <p style="text-align: center;">{{ rutina.description }}</p>
+        <p style="text-align: center;">{{rutina.principiante}}</p>
+        <p style="text-align: center;">{{rutina.intermedio}}</p>
+        <p style="text-align: center;">{{rutina.avanzado}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
 </ion-content>
+
+ <!-- FOOTER // TABS -->
+    
+ <ion-footer>
+  <ion-toolbar>
+    <app-tabs></app-tabs>
+  </ion-toolbar>
+</ion-footer>
+
