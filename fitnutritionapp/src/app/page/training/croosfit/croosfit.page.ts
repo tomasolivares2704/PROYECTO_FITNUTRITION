@@ -8,9 +8,14 @@ import { Router } from '@angular/router';
 export class CroosfitPage implements OnInit {
   constructor(private router: Router){}
 
-  gotoejercicios(){
-    this.router.navigate(['/training'])
+  gotoEJERCICIOS(){
+    this.router.navigate(['/training/croosfit/cross-ejercicios'])
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
 }
+
+
