@@ -1,0 +1,37 @@
+<ion-content class="ion-padding" color="warning">
+  
+  
+  <div class="logo-container">
+    <div class="logo-text"><span class="logo-highlight">Fit</span>Nutrition <span class="logo-highlight">APP</span></div>
+  </div>
+
+
+ 
+  <!-- CARD -->
+  <ion-list>
+    <ion-card *ngFor="let rutina of rutinas">
+      <ion-card-header>
+        <ion-card-title>{{ rutina.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img style="width: 300px; height: 200px;" [src]="rutina.image"></ion-img>
+        <p style="text-align: center;">{{ rutina.description }}</p>
+        <p style="text-align: center;">{{rutina.principiante}}</p>
+        <p style="text-align: center;">{{rutina.intermedio}}</p>
+        <p style="text-align: center;">{{rutina.avanzado}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  
+
+</ion-content>
+
+<!-- FOOTER // TABS -->
+    
+<ion-footer>
+  <ion-toolbar>
+    <app-tabs></app-tabs>
+  </ion-toolbar>
+</ion-footer>
+
+

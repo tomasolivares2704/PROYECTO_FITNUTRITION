@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-rutinas',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class RutinasPage implements OnInit {
   selectedTime: string = ''; // Aquí almacenaremos el tiempo seleccionado
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  gotoLunes(){
+    this.router.navigate(['/training/rutinas/cardi-lunes'])
   }
 
 }

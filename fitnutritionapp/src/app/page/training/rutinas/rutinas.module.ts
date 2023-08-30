@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RutinasPageRoutingModule } from './rutinas-routing.module';
 
 import { RutinasPage } from './rutinas.page';
+import {shareModule} from '../../../share/share.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RutinasPageRoutingModule
+    RutinasPageRoutingModule,
+    shareModule
   ],
   declarations: [RutinasPage]
 })

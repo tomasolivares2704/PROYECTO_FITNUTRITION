@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: RutinasPage
+  },
+  {
+    path: 'cardi-lunes',
+    loadChildren: () => import('./cardi-lunes/cardi-lunes.module').then( m => m.CardiLunesPageModule)
   }
 ];
 
